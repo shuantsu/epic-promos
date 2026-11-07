@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epic Free Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">E</span>
+      <div>
+        <h1>Jogos Grátis da Epic</h1>
+        <p id="meta">carregando...</p>
+      </div>
+    </div>
+    <button id="refresh" class="btn">Atualizar</button>
+  </header>
+
+  <main>
+    <section id="current-section">
+      <div class="section-head">
+        <h2>Grátis agora</h2>
+        <span id="current-count" class="pill"></span>
+      </div>
+      <div id="current-games" class="grid"></div>
+    </section>
+
+    <section id="next-section">
+      <div class="section-head">
+        <h2>Próximos jogos</h2>
+        <span id="next-count" class="pill"></span>
+      </div>
+      <div id="next-games" class="grid"></div>
+    </section>
+
+    <div id="error" class="error" hidden></div>
+  </main>
+
+  <footer>
+    <p>Ofertas semanais da Epic Games Store · região <span id="region"></span></p>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="thumb-wrap">
+        <img class="thumb" alt="" loading="lazy" />
+        <span class="badge"></span>
+      </div>
+      <div class="body">
+        <h3 class="title"></h3>
+        <p class="desc"></p>
+        <div class="meta-row">
+          <span class="price"></span>
+          <span class="countdown"></span>
+        </div>
+        <a class="cta" target="_blank" rel="noopener">Resgatar na Epic</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>
